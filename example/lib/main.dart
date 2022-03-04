@@ -1,3 +1,4 @@
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_app_events/facebook_app_events.dart';
 
@@ -21,6 +22,25 @@ class MyApp extends StatelessWidget {
                 builder: (context, snapshot) {
                   final id = snapshot.data ?? '???';
                   return Text('Anonymous ID: $id');
+                },
+              ),
+              MaterialButton(
+                child: Text("Initialize"),
+                onPressed: () async {
+                  try {
+                    var status = await AppTrackingTransparency.trackingAuthorizationStatus;
+                    if (status != TrackingStatus.authorized) {
+                      print("Requesting!");
+                      status = await AppTrackingTransparency.requestTrackingAuthorization();
+                    }
+                    print("Status $status");
+                    if (status == TrackingStatus.authorized) {
+                      await facebookAppEvents.setAutoLogAppEventsEnabled(true);
+                      await facebookAppEvents.initialize();
+                    }
+                  } catch (e) {
+                    print(e);
+                  }
                 },
               ),
               MaterialButton(
@@ -54,7 +74,7 @@ class MyApp extends StatelessWidget {
               MaterialButton(
                 child: Text("Enable advertise tracking!"),
                 onPressed: () {
-                  facebookAppEvents.setAdvertiserTracking(enabled: true);
+                  facebookAppEvents.setAdvertiserTracking(enabled: true, collectId: true);
                 },
               ),
               MaterialButton(

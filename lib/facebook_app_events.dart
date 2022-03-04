@@ -9,8 +9,7 @@ class FacebookAppEvents {
   static const _channel = MethodChannel(channelName);
 
   // See: https://github.com/facebook/facebook-android-sdk/blob/master/facebook-core/src/main/java/com/facebook/appevents/AppEventsConstants.java
-  static const eventNameCompletedRegistration =
-      'fb_mobile_complete_registration';
+  static const eventNameCompletedRegistration = 'fb_mobile_complete_registration';
   static const eventNameViewedContent = 'fb_mobile_content_view';
   static const eventNameRated = 'fb_mobile_rate';
   static const eventNameInitiatedCheckout = 'fb_mobile_initiated_checkout';
@@ -66,7 +65,11 @@ class FacebookAppEvents {
   }
 
   Future<String?> getAnonymousId() {
-    return _channel.invokeMethod<String>('getAnonymousId');
+    return _channel.invokeMethod<String?>('getAnonymousId');
+  }
+
+  Future<String?> initialize() {
+    return _channel.invokeMethod<String>('initialize');
   }
 
   /// Log an app event with the specified [name] and the supplied [parameters] value.
@@ -252,8 +255,7 @@ class FacebookAppEvents {
         paramNameContentId: contentId,
         paramNameNumItems: numItems,
         paramNameCurrency: currency,
-        paramNamePaymentInfoAvailable:
-            paymentInfoAvailable ? paramValueYes : paramValueNo,
+        paramNamePaymentInfoAvailable: paymentInfoAvailable ? paramValueYes : paramValueNo,
       },
     );
   }

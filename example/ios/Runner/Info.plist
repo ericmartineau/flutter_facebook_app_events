@@ -41,18 +41,61 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-		<key>CFBundleURLSchemes</key>
-		<array>
-			<string>fb391810292537784</string>
-		</array>
-		</dict>
-	</array>
 	<key>FacebookAppID</key>
-	<string>391810292537784</string>
-	<key>FacebookDisplayName</key>
-	<string>Flutter App Events Plugin</string>
+  <string>1211511522569042</string>
+  <key>FacebookDisplayName</key>
+  <string>Trippi</string>
+  <key>FacebookClientToken</key>
+  <string>c5393f1b91ad91f6638ce6790ee11509</string>
+  <key>FacebookAdvertiserIDCollectionEnabled</key>
+  <false />
+  <key>FacebookAutoLogAppEventsEnabled</key>
+  <false/>
+  <key>FirebaseAppDelegateProxyEnabled</key>
+  <false/>
+  <key>ITSAppUsesNonExemptEncryption</key>
+  <false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>ymail</string>
+		<string>ms-outlook</string>
+		<string>googlegmail</string>
+		<string>pinterest</string>
+		<string>snapchat</string>
+		<string>linkedin</string>
+		<string>twitter</string>
+		<string>fb</string>
+		<string>instagram</string>
+		<string>comgooglemaps</string>
+    <string>fbapi</string>
+    <string>fbapi20130214</string>
+    <string>fbapi20130410</string>
+    <string>fbapi20130702</string>
+    <string>fbapi20131010</string>
+    <string>fbapi20131219</string>
+    <string>fbapi20140410</string>
+    <string>fbapi20140116</string>
+    <string>fbapi20150313</string>
+    <string>fbapi20150629</string>
+    <string>fbapi20160328</string>
+    <string>fbauth</string>
+    <string>fb-messenger-share-api</string>
+    <string>fbauth2</string>
+    <string>fbshareextension</string>
+	</array>
+	<key>NSUserTrackingUsageDescription</key>
+  <string>This is only used to track app installs.</string>
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleTypeRole</key>
+      <string>Editor</string>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>fb1211511522569042</string>
+        <string>com.googleusercontent.apps.1084437765411-hl39m34bbks3mdnjhkeprj09dk0cme4a</string>
+      </array>
+    </dict>
+  </array>
 </dict>
 </plist>
