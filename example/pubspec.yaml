@@ -1,22 +1,17 @@
 name: facebook_app_events_example
+publish_to: none
 description: Demonstrates how to use the facebook_app_events plugin.
-publish_to: 'none'
-
-environment:
+environment: 
   sdk: '>=2.12.0 <3.0.0'
-
-dependencies:
-  flutter:
-    sdk: flutter
-  cupertino_icons: ^0.1.2
+dependencies: 
+  cupertino_icons: ^1.0.5
   app_tracking_transparency: ^2.0.2+1
-
-dev_dependencies:
-  flutter_test:
+  flutter: 
     sdk: flutter
-
-  facebook_app_events:
-    path: ../
-
-flutter:
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+  facebook_app_events: 
+    path: /Users/ericm/sunny/trippi_plugins/flutter_facebook_app_events
+flutter: 
   uses-material-design: true
