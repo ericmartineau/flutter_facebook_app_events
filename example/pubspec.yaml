@@ -12,6 +12,8 @@ dev_dependencies:
   flutter_test: 
     sdk: flutter
   facebook_app_events: 
-    path: /Users/ericm/sunny/trippi_plugins/flutter_facebook_app_events
+    git: 
+      url: git@github.com:ericmartineau/flutter_facebook_app_events.git
+      ref: trippi_app
 flutter: 
   uses-material-design: true
