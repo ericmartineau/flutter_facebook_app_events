@@ -12,6 +12,6 @@ dev_dependencies:
   flutter_test: 
     sdk: flutter
   facebook_app_events: 
-    path: /Users/ericm/sunny/trippi_plugins/flutter_facebook_app_events
+    path: ../
 flutter: 
   uses-material-design: true
